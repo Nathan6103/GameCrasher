@@ -1,3 +1,13 @@
+local netboost = 1000 --Velocity 
+local antiragdoll = true --Removes hingeConstraints and ballSocketConstraints from your character
+local newanimate = false --Disables the animate script and enables after reanimation
+local discharscripts = true --Disables all localScripts parented to your character before reanimation
+local R15toR6 = true --Tries to convert your character to r6 if its r15 (sometimes doesnt work)
+local addtools = false --Puts all tools from backpack to character and lets you hold them after reanimation
+local loadtime = game:GetService("Players").RespawnTime + 0.5 --Anti respawn delay
+local method = 3 --Renimation method (useless)
+local hedafterneck = true --Disble aligns for head and enable after neck is removed
+
 local lp = game:GetService("Players").LocalPlayer
 local rs = game:GetService("RunService")
 local stepped = rs.Stepped
@@ -137,7 +147,7 @@ local function align(Part0, Part1)
         end)
     end
 end
-
+warn("Script made by VoidXD!")
 local function respawnrequest()
     local c = lp.Character
     local ccfr = ws.CurrentCamera.CFrame
